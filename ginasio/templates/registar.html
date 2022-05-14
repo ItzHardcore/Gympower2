@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTAR</title>
+  </head>
+
+  <style>
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 25%;
+      padding: 12px 20px;
+      margin: 6px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #ffc300;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      width: 30%;
+    }
+
+    .img {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+
+    form {
+      text-align: center;
+    }
+  </style>
+
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <form method="POST" action="">
+      {% csrf_token %}
+
+      <div class="img">
+        {% load static %} <img style="width: 10%" src="{% static 'ginasio/media/logo2.png' %}" alt="home" />
+      </div>
+
+      <div class="container">
+        <table>
+          <tr>
+            <p><b>Username</b></p>
+            <p>{{form.username}}</p>
+          </tr>
+          <tr>
+            <p><b>Email</b></p>
+            <p>{{form.email}}</p>
+          </tr>
+          <tr>
+            <p><b>Password</b></p>
+            <p>{{form.password1}}</p>
+          </tr>
+          <tr>
+            <p><b>Confirmar Password</b></p>
+            <p>{{form.password2}}</p>
+          </tr>
+        </table>
+
+
+
+
+
+
+
+
+        <button type="submit">Criar Utilizador</button>
+      </div>
+      <br>
+      <a href="{% url 'login' %}"> Já tem conta?</a>
+      {{form.errors}}
+    </form>
+    
+    
+
+    <script>
+      var form_fields = document.getElementsByTagName("input");
+      form_fields[1].placeholder = "Username..";
+      form_fields[2].placeholder = "Email..";
+      form_fields[3].placeholder = "Passowrd...";
+      form_fields[4].placeholder = "Confirmar Password...";
+
+      for (var field in form_fields) {
+        form_fields[field].className += " form-control";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.card {
+    box-shadow: 0 4px 1px 0 rgba(45, 67, 67, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }

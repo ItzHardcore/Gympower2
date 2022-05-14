@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'ginasio/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ginasio/style_flip.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>PT</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif">
+
+
+
+    <div>
+        <ul>
+            <li style="padding-right: 0px;height: 53px;width: 70px;"> {% load static %} <img width="26%"
+                style="width: 60px" src="{% static 'ginasio/media/logo2.png' %}" alt="home" /> </li>
+            <li style="padding-top: 6px;"> <h2><b>GYM POWER</b></h2> </li> 
+            
+            <div>
+            <li style="padding-left: 15px;"><a href=""> <b> Criar Treino </b></a></li>
+            <li style="padding-left: 15px;"><a href=""> <b> Criar Dieta </b></a></li>
+            <li style="padding-left: 15px;"><a href=""> <b> Consultar Alunos </b></a></li>
+            </div>
+
+
+            <div style="float: right;">
+
+            <li> <a class="active" href="{% url 'pt_perfil' %}"><b> Perfil </b></a></li>
+            <li> <a class="active" href="{% url 'logout' %}"><b> Logout </b></a></li>
+           
+
+            </div>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                {% load static %} <img src="{% static 'ginasio/media/new_client.jpeg' %}" alt="CriarCliente" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Criar Cliente</h1>
+                                <p>Mais um cliente, mais uma missão</p>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                {% load static %} <img src="{% static 'ginasio/media/old_client.jpeg' %}" alt="ProcurarCliente" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Procurar Cliente</h1>
+                                <p>Encontre o cliente que pretenda</p>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                {% load static %} <img src="{% static 'ginasio/media/aulas.jpeg' %}" alt="Aulas" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Personal Trainer</h1>
+                                <p>PT da academia</p>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="content">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                {% load static %} <img src="{% static 'ginasio/media/pts.jpeg' %}" alt="PT" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Mapa de Aulas</h1>
+                                <p>As melhores aulas de grupo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </th>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    
+</body>
+</html>
